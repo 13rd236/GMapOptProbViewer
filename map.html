@@ -1,0 +1,34 @@
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>Google maps API</title>
+    経路地点<input type="text" id="point" value="">
+    <input type="button" id="addBtn" value="追加">
+    <input type="button" id="routeBtn" value="ST描画">
+    <input type="button" id="tspBtn" value="TSP描画">
+    <input type="button" id="tdpBtn" value="TDP描画">
+    <!-- <input type="button" id="jsonBtn" value="JSON"> -->
+    <input type="button" id="debackBtn" value="デバッグ">
+    <input type="button" id="carBtn" value="自動車">
+    <input type="button" id="bicyclBtn" value="自転車">
+    <input type="button" id="transitBtn" value="公共交通機関">
+    <input type="button" id="walkBtn" value="徒歩">
+    <style type="text/css">
+      html,body,#map {
+        height: 95%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div id="travelMode"></div>
+    <div id="array"></div>
+    <div id="route"></div>
+
+    <script type="text/javascript" src="jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="mapscript.js"></script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZODfevuxsctKvzKkoIaKTVXqpluRvtLE&callback=initHtml">
+    </script>
+  </body>
+</html>
